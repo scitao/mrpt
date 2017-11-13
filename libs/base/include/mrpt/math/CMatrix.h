@@ -80,10 +80,7 @@ class CMatrix : public mrpt::utils::CSerializable,
 	}
 
 };  // end of class definition
-::mrpt::utils::CStream& operator>>(
-	mrpt::utils::CStream& in, CMatrix::Ptr& pObj);
-DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE2(
-	CMatrix, mrpt::utils::CSerializable, CMatrix)
+mrpt::utils::CStream& operator>>(mrpt::utils::CStream& in, CMatrix::Ptr& pObj);
 
 }  // End of namespace
 }  // End of namespace

@@ -138,16 +138,14 @@ class CSimplePointsMap : public CPointsMap
 	virtual void PLY_import_set_vertex_count(const size_t N) override;
 	/** @} */
 
-	MAP_DEFINITION_START(CSimplePointsMap, MAPS_IMPEXP)
+	MAP_DEFINITION_START(CSimplePointsMap)
 	/** Observations insertion options */
 	mrpt::maps::CPointsMap::TInsertionOptions insertionOpts;
 	/** Probabilistic observation likelihood options */
 	mrpt::maps::CPointsMap::TLikelihoodOptions likelihoodOpts;
-	MAP_DEFINITION_END(CSimplePointsMap, MAPS_IMPEXP)
+	MAP_DEFINITION_END(CSimplePointsMap, )
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CSimplePointsMap, CPointsMap, MAPS_IMPEXP)
 }  // End of namespace
 
 namespace utils

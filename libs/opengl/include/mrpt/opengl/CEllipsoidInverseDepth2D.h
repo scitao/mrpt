@@ -77,8 +77,6 @@ class CEllipsoidInverseDepth2D
 	/** Private, virtual destructor: only can be deleted from smart pointers */
 	virtual ~CEllipsoidInverseDepth2D() {}
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CEllipsoidInverseDepth2D, CRenderizableDisplayList, OPENGL_IMPEXP)
 
 }  // end namespace
 

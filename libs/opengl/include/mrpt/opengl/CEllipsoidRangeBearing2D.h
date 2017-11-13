@@ -61,8 +61,6 @@ class CEllipsoidRangeBearing2D
 	/** Private, virtual destructor: only can be deleted from smart pointers */
 	virtual ~CEllipsoidRangeBearing2D() {}
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CEllipsoidRangeBearing2D, CRenderizableDisplayList, OPENGL_IMPEXP)
 
 }  // end namespace
 

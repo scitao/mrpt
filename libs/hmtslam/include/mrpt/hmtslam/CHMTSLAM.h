@@ -506,8 +506,6 @@ class CHMTSLAM : public mrpt::utils::COutputLogger,
 	} m_options;
 
 };  // End of class CHMTSLAM.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CHMTSLAM, mrpt::utils::CSerializable, HMTSLAM_IMPEXP)
 
 /** Virtual base for local SLAM methods, used in mrpt::slam::CHMTSLAM.
   */

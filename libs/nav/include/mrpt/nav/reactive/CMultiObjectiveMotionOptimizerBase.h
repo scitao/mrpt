@@ -109,7 +109,5 @@ class CMultiObjectiveMotionOptimizerBase
 	std::vector<mrpt::math::CRuntimeCompiledExpression> m_movement_assert_exprs;
 	std::map<std::string, double> m_expr_vars;
 };
-DEFINE_MRPT_OBJECT_POST_CUSTOM_LINKAGE(
-	CMultiObjectiveMotionOptimizerBase, NAV_IMPEXP)
 }
 }

@@ -204,8 +204,6 @@ class CBeacon : public mrpt::poses::CPointPDF
 		const float& maxDistanceFromCenter = 0);
 
 };  // End of class definition
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CBeacon, mrpt::utils::CSerializable, MAPS_IMPEXP)
 
 }  // End of namespace
 }  // End of namespace

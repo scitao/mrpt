@@ -169,7 +169,7 @@ class CGasConcentrationGridMap2D : public CRandomFieldGridMap2D
 	/** The timestamp of the last time the advection simulation was executed */
 	mrpt::system::TTimeStamp timeLastSimulated;
 
-	MAP_DEFINITION_START(CGasConcentrationGridMap2D, MAPS_IMPEXP)
+	MAP_DEFINITION_START(CGasConcentrationGridMap2D)
 	/** See CGasConcentrationGridMap2D::CGasConcentrationGridMap2D */
 	float min_x, max_x, min_y, max_y, resolution;
 	/** The kind of map representation (see
@@ -177,10 +177,8 @@ class CGasConcentrationGridMap2D : public CRandomFieldGridMap2D
 	mrpt::maps::CGasConcentrationGridMap2D::TMapRepresentation mapType;
 	/** Observations insertion options */
 	mrpt::maps::CGasConcentrationGridMap2D::TInsertionOptions insertionOpts;
-	MAP_DEFINITION_END(CGasConcentrationGridMap2D, MAPS_IMPEXP)
+	MAP_DEFINITION_END(CGasConcentrationGridMap2D, )
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CGasConcentrationGridMap2D, CRandomFieldGridMap2D, MAPS_IMPEXP)
 
 }  // End of namespace
 

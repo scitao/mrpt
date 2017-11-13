@@ -155,8 +155,6 @@ class CHolonomicFullEval : public CAbstractHolonomicReactiveMethod
 		unsigned int target_idx, const NavInput& ni, EvalOutput& eo);
 };  // end of CHolonomicFullEval
 
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CHolonomicFullEval, CAbstractHolonomicReactiveMethod, NAV_IMPEXP)
 
 /** A class for storing extra information about the execution of
  * CHolonomicFullEval navigation.
@@ -183,8 +181,6 @@ class CLogFileRecord_FullEval : public CHolonomicLogFileRecord
 		return &dirs_scores;
 	}
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CLogFileRecord_FullEval, CHolonomicLogFileRecord, NAV_IMPEXP)
 
 /** @} */
 }  // end namespace

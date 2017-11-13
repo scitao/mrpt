@@ -135,8 +135,6 @@ class CAbstractHolonomicReactiveMethod
 	/** used in setConfigFileSectionName(), initialize() */
 	std::string m_cfgSectionName;
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CAbstractHolonomicReactiveMethod, mrpt::utils::CSerializable, NAV_IMPEXP)
 /** @} */
 }
 }

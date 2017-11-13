@@ -214,8 +214,6 @@ class CIncrementalMapPartitioner
 	std::vector<uint8_t> m_modified_nodes;
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CIncrementalMapPartitioner, mrpt::utils::CSerializable, SLAM_IMPEXP)
 }
 }  // End of namespace
 

@@ -493,8 +493,6 @@ class CParameterizedTrajectoryGenerator
 		bool treat_as_obstacle = true) const;
 
 };  // end of class
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CParameterizedTrajectoryGenerator, mrpt::utils::CSerializable, NAV_IMPEXP)
 
 /** A list of PTGs (smart pointers) */
 using TListPTGPtr =

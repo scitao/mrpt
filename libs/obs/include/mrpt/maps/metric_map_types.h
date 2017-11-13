@@ -105,7 +105,7 @@ class TMapGenericParams : public mrpt::utils::CLoadableOptions,
 	void dumpToTextStream(
 		mrpt::utils::CStream& out) const override;  // See base docs
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_LINKAGE(TMapGenericParams, OBS_IMPEXP)
+DEFINE_SERIALIZABLE_POST_CUSTOM_LINKAGE(TMapGenericParams, )
 
 }  // End of namespace
 }  // End of namespace

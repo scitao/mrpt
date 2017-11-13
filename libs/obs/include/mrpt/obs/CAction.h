@@ -46,8 +46,6 @@ class CAction : public mrpt::utils::CSerializable
 	mrpt::system::TTimeStamp timestamp;
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CAction, mrpt::utils::CSerializable, OBS_IMPEXP)
 
 }  // End of namespace
 }  // End of namespace

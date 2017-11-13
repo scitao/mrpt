@@ -109,7 +109,7 @@ class CAbstractNavigator : public mrpt::utils::COutputLogger
 		virtual std::string getAsText() const = 0;
 
 	   protected:
-		friend bool NAV_IMPEXP operator==(
+		friend bool  operator==(
 			const TNavigationParamsBase&, const TNavigationParamsBase&);
 		virtual bool isEqual(const TNavigationParamsBase& o) const = 0;
 	};
@@ -354,7 +354,7 @@ class CAbstractNavigator : public mrpt::utils::COutputLogger
 	MRPT_MAKE_ALIGNED_OPERATOR_NEW
 };
 
-bool NAV_IMPEXP operator==(
+bool  operator==(
 	const CAbstractNavigator::TNavigationParamsBase&,
 	const CAbstractNavigator::TNavigationParamsBase&);
 }

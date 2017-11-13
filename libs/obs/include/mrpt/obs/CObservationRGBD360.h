@@ -146,8 +146,6 @@ class CObservationRGBD360 : public CObservation
 	void getDescriptionAsText(std::ostream& o) const override;
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CObservationRGBD360, CObservation, OBS_IMPEXP)
 
 }  // End of namespace
 

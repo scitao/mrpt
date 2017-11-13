@@ -100,8 +100,6 @@ class THypothesisIDSet : public mrpt::utils::CSerializable,
 	  */
 	void debugDump() const;
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	THypothesisIDSet, mrpt::utils::CSerializable, HMTSLAM_IMPEXP)
 
 /** A class for storing a sequence of arcs (a path).
   * \sa CHMTSLAM

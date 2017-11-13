@@ -34,9 +34,9 @@ struct TCPoint
 	float x, y, phi, t, dist, v, w;
 };
 typedef std::vector<TCPoint> TCPointVector;
-mrpt::utils::CStream NAV_IMPEXP& operator<<(
+mrpt::utils::CStream & operator<<(
 	mrpt::utils::CStream& o, const mrpt::nav::TCPoint& p);
-mrpt::utils::CStream NAV_IMPEXP& operator>>(
+mrpt::utils::CStream & operator>>(
 	mrpt::utils::CStream& i, mrpt::nav::TCPoint& p);
 
 /** Base class for all PTGs suitable to non-holonomic, differentially-driven (or

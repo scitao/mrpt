@@ -810,8 +810,6 @@ class CObservation3DRangeScan : public CObservation
 	static TCached3DProjTables m_3dproj_lut;
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CObservation3DRangeScan, CObservation, OBS_IMPEXP)
 
 }  // End of namespace
 

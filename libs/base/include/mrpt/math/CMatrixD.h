@@ -75,10 +75,7 @@ class CMatrixD : public mrpt::utils::CSerializable,
 	explicit CMatrixD(const TPoint3D& p);
 
 };  // end of class definition
-::mrpt::utils::CStream& operator>>(
-	mrpt::utils::CStream& in, CMatrixD::Ptr& pObj);
-DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE2(
-	CMatrixD, mrpt::utils::CSerializable, CMatrixD)
+mrpt::utils::CStream& operator>>(mrpt::utils::CStream& in, CMatrixD::Ptr& pObj);
 
 }  // End of namespace
 }  // End of namespace

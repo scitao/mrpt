@@ -31,7 +31,7 @@ struct T2DScanProperties
 };
 /** Order operator, so T2DScanProperties can appear in associative STL
  * containers. */
-bool OBS_IMPEXP
+bool 
 	operator<(const T2DScanProperties& a, const T2DScanProperties& b);
 
 }  // End of namespace

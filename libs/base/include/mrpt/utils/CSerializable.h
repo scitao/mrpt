@@ -90,8 +90,6 @@ class CSerializable : public mrpt::utils::CObject
 #endif
 };  // End of class def.
 
-DEFINE_MRPT_OBJECT_POST(CSerializable)
-
 /** \addtogroup noncstream_serialization Non-CStream serialization functions (in
  * #include <mrpt/utils/CSerializable.h>)
   * \ingroup mrpt_base_grp
@@ -182,34 +180,6 @@ void
 	DEFINE_SERIALIZABLE_CUSTOM_LINKAGE(                                 \
 		class_name, void /*no extra linkage keyword*/, static /*none*/, \
 		virtual /*none*/)
-
-/**  This declaration must be inserted in all CSerializable classes definition,
- * before the class declaration.
-  */
-
-#define DEFINE_SERIALIZABLE_POST_CUSTOM_LINKAGE(class_name, _LINKAGE_) \
-	DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE2(                      \
-		class_name, mrpt::utils::CSerializable, _LINKAGE_ class_name)
-
-#define DEFINE_SERIALIZABLE_POST(class_name)      \
-	DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE2( \
-		class_name, mrpt::utils::CSerializable, class_name)
-
-/**  This declaration must be inserted in all CSerializable classes definition,
- * before the class declaration.
-  */
-
-#define DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE( \
-	class_name, base_name, _LINKAGE_)                 \
-	DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE2(     \
-		class_name, base_name, _LINKAGE_ class_name)
-
-/**  This declaration must be inserted in all CSerializable classes definition,
- * before the class declaration. */
-
-#define DEFINE_SERIALIZABLE_POST_CUSTOM_BASE(class_name, base_name) \
-	DEFINE_MRPT_OBJECT_POST_CUSTOM_BASE_LINKAGE(                    \
-		class_name, base_name,)
 
 /** This must be inserted in all CSerializable classes implementation files */
 #define IMPLEMENTS_SERIALIZABLE(class_name, base, NameSpace) \

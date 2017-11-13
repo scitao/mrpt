@@ -1152,8 +1152,6 @@ class CPointsMap : public CMetricMap,
 	friend struct detail::pointmap_traits;
 
 };  // End of class def.
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CPointsMap, CMetricMap, MAPS_IMPEXP)
 
 }  // End of namespace
 
@@ -1163,7 +1161,7 @@ namespace global_settings
   * Affects to:
   *		- mrpt::maps::CPointsMap and all its children classes.
   */
-extern MAPS_IMPEXP float POINTSMAPS_3DOBJECT_POINTSIZE;
+extern  float POINTSMAPS_3DOBJECT_POINTSIZE;
 }
 
 namespace utils

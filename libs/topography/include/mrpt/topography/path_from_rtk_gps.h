@@ -58,7 +58,7 @@ struct TPathFromRTKInfo
   *  For more details on the method, refer to the paper: (...)
   * \sa mrpt::topography
   */
-void TOPO_IMPEXP path_from_rtk_gps(
+void  path_from_rtk_gps(
 	mrpt::poses::CPose3DInterpolator& robot_path,
 	const mrpt::obs::CRawlog& rawlog, size_t rawlog_first, size_t rawlog_last,
 	bool isGUI = false, bool disableGPSInterp = false,

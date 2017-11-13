@@ -438,8 +438,6 @@ class COpenGLViewport : public mrpt::utils::CSerializable,
 
 	std::vector<CLight> m_lights;
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	COpenGLViewport, mrpt::utils::CSerializable, OPENGL_IMPEXP)
 /**
   * Inserts an openGL object into a viewport. Allows call chaining.
   * \sa mrpt::opengl::COpenGLViewport::insert

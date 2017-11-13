@@ -44,8 +44,6 @@ class CDetectableObject : public mrpt::utils::CSerializable
 	};
 
 };  // End of class
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CDetectableObject, mrpt::utils::CSerializable, DETECTORS_IMPEXP)
 
 class CDetectable2D : public CDetectableObject
 {
@@ -79,8 +77,6 @@ class CDetectable2D : public CDetectableObject
 		return std::sqrt(std::pow(c_x1 - c_x2, 2) + pow(c_y1 - c_y2, 2));
 	};
 };
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CDetectable2D, mrpt::detectors::CDetectableObject, DETECTORS_IMPEXP)
 
 class CDetectable3D : public CDetectable2D
 {
@@ -97,8 +93,6 @@ class CDetectable3D : public CDetectable2D
 	float m_z;
 
 };  // End of class
-DEFINE_SERIALIZABLE_POST_CUSTOM_BASE_LINKAGE(
-	CDetectable3D, mrpt::detectors::CDetectable2D, DETECTORS_IMPEXP)
 }
 }
 
