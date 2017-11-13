@@ -77,7 +77,6 @@ macro(internal_define_mrpt_lib name headers_only is_metalib)
 			"${CMAKE_SOURCE_DIR}/libs/${name}/src/registerAllClasses.cpp"
 			)
 		LIST(APPEND ${name}_EXTRA_SRCS_NAME
-			"DLL link macros"
 			"Class register"
 			)
 	ENDIF (NOT ${headers_only})
@@ -157,7 +156,7 @@ macro(internal_define_mrpt_lib name headers_only is_metalib)
 	ENDIF (NOT ${headers_only})
 
 	add_dependencies(all_mrpt_libs mrpt-${name}) # for target: all_mrpt_libs
-	
+
 	# Append to list of all mrpt-* libraries:
 	if("${ALL_MRPT_LIBS}" STREQUAL "")  # first one is different to avoid an empty first list element ";mrpt-xxx"
 		SET(ALL_MRPT_LIBS "mrpt-${name}" CACHE INTERNAL "")  # This emulates global vars
@@ -227,12 +226,12 @@ macro(internal_define_mrpt_lib name headers_only is_metalib)
 			${AUX_EXTRA_LINK_LIBS}
 			)
 	ENDIF (NOT ${headers_only})
-	
+
 	# Special case: embedded eigen3 as dep of "mrpt-base"
 	IF (EIGEN_USE_EMBEDDED_VERSION AND ${name} STREQUAL "base")
 		add_dependencies(mrpt-${name} EP_eigen3)
 	ENDIF()
-	
+
 
 	if(ENABLE_SOLUTION_FOLDERS)
 		set_target_properties(mrpt-${name} PROPERTIES FOLDER "modules")
