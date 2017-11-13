@@ -74,7 +74,6 @@ macro(internal_define_mrpt_lib name headers_only is_metalib)
 	# Only add these ones for "normal" libraries:
 	IF (NOT ${headers_only})
 		LIST(APPEND ${name}_EXTRA_SRCS
-			"${CMAKE_SOURCE_DIR}/libs/${name}/include/mrpt/${name}/link_pragmas.h"
 			"${CMAKE_SOURCE_DIR}/libs/${name}/src/registerAllClasses.cpp"
 			)
 		LIST(APPEND ${name}_EXTRA_SRCS_NAME
