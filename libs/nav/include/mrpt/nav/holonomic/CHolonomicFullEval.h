@@ -155,7 +155,6 @@ class CHolonomicFullEval : public CAbstractHolonomicReactiveMethod
 		unsigned int target_idx, const NavInput& ni, EvalOutput& eo);
 };  // end of CHolonomicFullEval
 
-
 /** A class for storing extra information about the execution of
  * CHolonomicFullEval navigation.
  * \sa CHolonomicFullEval, CHolonomicLogFileRecord

@@ -22,7 +22,6 @@
 
 #include <mrpt/slam/PF_implementations_data.h>
 
-
 namespace mrpt
 {
 namespace slam

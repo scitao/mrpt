@@ -18,7 +18,6 @@
 #include <mrpt/maps/CMultiMetricMap.h>
 #include <mrpt/poses/poses_frwds.h>
 
-
 namespace mrpt
 {
 namespace slam
@@ -27,9 +26,8 @@ namespace slam
   *   observations taken at some poses/nodes.
   * \ingroup mrpt_slam_grp
   */
-class CIncrementalMapPartitioner
-	: public mrpt::utils::COutputLogger,
-	  public mrpt::utils::CSerializable
+class CIncrementalMapPartitioner : public mrpt::utils::COutputLogger,
+								   public mrpt::utils::CSerializable
 {
 	// This must be added to any CSerializable derived class:
 	DEFINE_SERIALIZABLE(CIncrementalMapPartitioner)

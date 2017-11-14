@@ -23,10 +23,9 @@ namespace math
  * \ingroup mrpt_base_grp
  */
 class CMatrixD : public mrpt::utils::CSerializable,
-								   public CMatrixTemplateNumeric<double>
+				 public CMatrixTemplateNumeric<double>
 {
-	DEFINE_SERIALIZABLE_CUSTOM_LINKAGE(
-		CMatrixD, void, static, virtual)
+	DEFINE_SERIALIZABLE_CUSTOM_LINKAGE(CMatrixD, void, static, virtual)
    public:
 	/** Constructor */
 	CMatrixD() : CMatrixTemplateNumeric<double>(1, 1) {}

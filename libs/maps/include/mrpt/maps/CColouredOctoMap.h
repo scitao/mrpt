@@ -15,7 +15,6 @@
 #include <octomap/ColorOcTree.h>
 #include <mrpt/obs/obs_frwds.h>
 
-
 namespace mrpt
 {
 namespace maps

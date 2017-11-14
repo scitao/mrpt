@@ -24,7 +24,6 @@
 #include <mrpt/obs/obs_frwds.h>
 #include <mrpt/utils/TEnumType.h>
 
-
 #include <mrpt/config.h>
 #if (                                                \
 	!defined(OCCUPANCY_GRIDMAP_CELL_SIZE_8BITS) &&   \
@@ -65,9 +64,9 @@ namespace maps
 class COccupancyGridMap2D : public CMetricMap,
 // Inherit from the corresponding specialization of CLogOddsGridMap2D<>:
 #ifdef OCCUPANCY_GRIDMAP_CELL_SIZE_8BITS
-										public CLogOddsGridMap2D<int8_t>
+							public CLogOddsGridMap2D<int8_t>
 #else
-										public CLogOddsGridMap2D<int16_t>
+							public CLogOddsGridMap2D<int16_t>
 #endif
 {
 	DEFINE_SERIALIZABLE(COccupancyGridMap2D)
@@ -1177,7 +1176,7 @@ class COccupancyGridMap2D : public CMetricMap,
 	MAP_DEFINITION_END(COccupancyGridMap2D, )
 };
 
-bool  operator<(
+bool operator<(
 	const COccupancyGridMap2D::TPairLikelihoodIndex& e1,
 	const COccupancyGridMap2D::TPairLikelihoodIndex& e2);
 

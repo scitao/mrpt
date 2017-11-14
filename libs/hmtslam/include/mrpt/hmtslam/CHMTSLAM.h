@@ -64,7 +64,7 @@ class CLSLAM_RBPF_2DLASER;
   * \ingroup mrpt_hmtslam_grp
  */
 class CHMTSLAM : public mrpt::utils::COutputLogger,
-								public mrpt::utils::CSerializable
+				 public mrpt::utils::CSerializable
 {
 	friend class CLocalMetricHypothesis;
 	friend class CLSLAM_RBPF_2DLASER;

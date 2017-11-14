@@ -22,7 +22,6 @@
 #include <mrpt/vision/types.h>
 #include <mrpt/vision/chessboard_camera_calib.h>
 
-
 namespace mrpt
 {
 namespace vision
@@ -37,23 +36,22 @@ typedef std::map<
 	std::map<int, std::map<int, std::deque<std::pair<TFeatureID, double>>>>>
 	TQuantizationTable;
 
-void  saveQTableToFile(
+void saveQTableToFile(
 	const TQuantizationTable& qTable, const std::string& filename);
 
-void 
-	insertHashCoeffs(const CFeature::Ptr& feat, TQuantizationTable& qTable);
+void insertHashCoeffs(const CFeature::Ptr& feat, TQuantizationTable& qTable);
 
-TMultiResMatchingOutput  relocalizeMultiDesc(
+TMultiResMatchingOutput relocalizeMultiDesc(
 	const mrpt::utils::CImage& image, CFeatureList& baseList,
 	CFeatureList& currentList, TQuantizationTable& qTable,
 	const TMultiResDescOptions& desc_opts,
 	const TMultiResDescMatchOptions& match_opts);
 
-void  updateBaseList(
+void updateBaseList(
 	CFeatureList& baseList, const CFeatureList& currentList,
 	const std::vector<int>& idx);
 
-void  checkScalesAndFindMore(
+void checkScalesAndFindMore(
 	CMatchedFeatureList& baseList, const CFeatureList& currentList,
 	const mrpt::utils::CImage& currentImage,
 	const TMultiResMatchingOutput& output,
@@ -70,7 +68,7 @@ void  checkScalesAndFindMore(
  * located outside the image or at its border (where the gradient cannot be
  * computed)
 	*/
-bool  computeGradient(
+bool computeGradient(
 	const mrpt::utils::CImage& image, const unsigned int x,
 	const unsigned int y, double& mag, double& ori);
 
@@ -87,7 +85,7 @@ bool  computeGradient(
 	* \param sigma        [IN]    The sigma value of the Gaussian kernel used to
  * smooth the orientation histogram (typically 7.5 px).
 	*/
-bool  computeMainOrientations(
+bool computeMainOrientations(
 	const mrpt::utils::CImage& image, const unsigned int x,
 	const unsigned int y, const unsigned int patchSize,
 	std::vector<double>& orientations, const double& sigma);
@@ -105,7 +103,7 @@ bool  computeMainOrientations(
 	* \param n    [IN]        The number of orienation bins used in the
  * histogram (typically 8).
 	*/
-void  interpolateHistEntry(
+void interpolateHistEntry(
 	std::vector<double>& hist, const double& cbin, const double& rbin,
 	const double& obin, const double& mag, const int d, const int n);
 
@@ -125,7 +123,7 @@ void  interpolateHistEntry(
  * for the HASH table used in relocalization.
 	* \sa TMultiResDescOptions
 	*/
-void  computeHistogramOfOrientations(
+void computeHistogramOfOrientations(
 	const mrpt::utils::CImage& image, const unsigned int x,
 	const unsigned int y, const unsigned int patchSize,
 	const double& orientation, std::vector<int32_t>& descriptor,
@@ -155,7 +153,7 @@ void  computeHistogramOfOrientations(
 	* \sa TMultiResDescMatchOptions, TMultiResDescOptions,
  * TMultiResMatchingOutput
 	*/
-TMultiResMatchingOutput  matchMultiResolutionFeatures(
+TMultiResMatchingOutput matchMultiResolutionFeatures(
 	const CFeatureList& list1, CFeatureList& list2,
 	const mrpt::utils::CImage& rightImage,
 	const TMultiResDescMatchOptions& matchOpts,
@@ -185,7 +183,7 @@ TMultiResMatchingOutput  matchMultiResolutionFeatures(
 	* \return The number of matches found
 	* \sa TMultiResDescMatchOptions
 	*/
-int  matchMultiResolutionFeatures(
+int matchMultiResolutionFeatures(
 	CMatchedFeatureList& mList1, CMatchedFeatureList& mList2,
 	const mrpt::utils::CImage& leftImage, const mrpt::utils::CImage& rightImage,
 	const TMultiResDescMatchOptions& matchOpts,
@@ -204,7 +202,7 @@ int  matchMultiResolutionFeatures(
  * or for higher ones.
 	* \param opts         [IN]    The options for computing the new descriptors.
 	*/
-int  computeMoreDescriptors(
+int computeMoreDescriptors(
 	const mrpt::utils::CImage& image, const CFeature::Ptr& inputFeat,
 	CFeature::Ptr& outputFeat, const bool& lowerScales,
 	const TMultiResDescOptions& opts);
@@ -221,7 +219,7 @@ int  computeMoreDescriptors(
 	* \param firstScale   [OUT]   The final scale (within [0
  * feat1->multiScale.size()-1]) where to look.
 	*/
-void  setProperScales(
+void setProperScales(
 	const CFeature::Ptr& feat1, const CFeature::Ptr& feat2, int& firstScale,
 	int& lastScale);
 
@@ -236,7 +234,7 @@ void  setProperScales(
  * computation process.
 	* \sa TMultiResDescOptions
 */
-void  computeMultiResolutionDescriptors(
+void computeMultiResolutionDescriptors(
 	const mrpt::utils::CImage& imageLeft, const mrpt::utils::CImage& imageRight,
 	CMatchedFeatureList& matchedFeats, const TMultiResDescOptions& opts);
 
@@ -248,7 +246,7 @@ void  computeMultiResolutionDescriptors(
  * computation process.
 	* \sa TMultiResDescOptions
 */
-bool  computeMultiResolutionDescriptors(
+bool computeMultiResolutionDescriptors(
 	const mrpt::utils::CImage& image, CFeature::Ptr& feat,
 	const TMultiResDescOptions& opts);
 
@@ -260,7 +258,7 @@ bool  computeMultiResolutionDescriptors(
  * computation process.
 	* \sa TMultiResDescOptions
 	*/
-std::vector<bool>  computeMultiResolutionDescriptors(
+std::vector<bool> computeMultiResolutionDescriptors(
 	const mrpt::utils::CImage& image, CFeatureList& list,
 	const TMultiResDescOptions& opts);
 
@@ -272,7 +270,7 @@ std::vector<bool>  computeMultiResolutionDescriptors(
  * computation process.
 	* \sa TMultiResDescOptions
 	*/
-void  computeMultiOrientations(
+void computeMultiOrientations(
 	const mrpt::utils::CImage& image, CFeatureList& list,
 	const TMultiResDescOptions& opts);
 

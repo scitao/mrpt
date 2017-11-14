@@ -15,8 +15,8 @@ namespace mrpt
 {
 namespace gui
 {
-void  tryCatch(
+void tryCatch(
 	const std::function<void()>& tryPart, const std::string& catchMessage);
-void  showErrorMessage(const std::string& str);
+void showErrorMessage(const std::string& str);
 }
 }

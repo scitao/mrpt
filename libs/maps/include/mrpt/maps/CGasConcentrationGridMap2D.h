@@ -13,7 +13,6 @@
 #include <mrpt/maps/CRandomFieldGridMap2D.h>
 #include <mrpt/obs/CObservationGasSensors.h>
 
-
 namespace mrpt
 {
 namespace maps
@@ -49,7 +48,7 @@ class CGasConcentrationGridMap2D : public CRandomFieldGridMap2D
 	/** Parameters related with inserting observations into the map:
 	  */
 	struct TInsertionOptions : public utils::CLoadableOptions,
-										   public TInsertionOptionsCommon
+							   public TInsertionOptionsCommon
 	{
 		/** Default values loader */
 		TInsertionOptions();

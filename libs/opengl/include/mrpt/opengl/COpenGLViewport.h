@@ -63,7 +63,7 @@ class CRenderizable;
   * \ingroup mrpt_opengl_grp
   */
 class COpenGLViewport : public mrpt::utils::CSerializable,
-									  public mrpt::utils::CObservable
+						public mrpt::utils::CObservable
 {
 	DEFINE_SERIALIZABLE(COpenGLViewport)
 	friend class COpenGLScene;

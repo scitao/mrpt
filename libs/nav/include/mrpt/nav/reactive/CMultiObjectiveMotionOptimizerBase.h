@@ -23,8 +23,7 @@ namespace nav
   *\sa CReactiveNavigationSystem, CReactiveNavigationSystem3D
   *  \ingroup nav_reactive
   */
-class CMultiObjectiveMotionOptimizerBase
-	: public mrpt::utils::CObject
+class CMultiObjectiveMotionOptimizerBase : public mrpt::utils::CObject
 {
 	DEFINE_VIRTUAL_MRPT_OBJECT(CMultiObjectiveMotionOptimizerBase)
    public:

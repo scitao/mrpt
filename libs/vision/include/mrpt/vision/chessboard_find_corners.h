@@ -59,7 +59,7 @@ namespace vision
   * \sa findMultipleChessboardsCorners,
   *mrpt::vision::checkerBoardCameraCalibration, drawChessboardCorners
   */
-bool  findChessboardCorners(
+bool findChessboardCorners(
 	const mrpt::utils::CImage& img,
 	std::vector<mrpt::utils::TPixelCoordf>& cornerCoords,
 	unsigned int check_size_x, unsigned int check_size_y,
@@ -98,7 +98,7 @@ bool  findChessboardCorners(
   *
   * \sa mrpt::vision::checkerBoardCameraCalibration, drawChessboardCorners
   */
-void  findMultipleChessboardsCorners(
+void findMultipleChessboardsCorners(
 	const mrpt::utils::CImage& img,
 	std::vector<std::vector<mrpt::utils::TPixelCoordf>>& cornerCoords,
 	unsigned int check_size_x, unsigned int check_size_y);

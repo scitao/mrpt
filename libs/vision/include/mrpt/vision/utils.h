@@ -61,7 +61,7 @@ namespace vision
 *  Note: By default, the search area is the whole (this) image.
 * \sa cross_correlation
 */
-void  openCV_cross_correlation(
+void openCV_cross_correlation(
 	const mrpt::utils::CImage& img, const mrpt::utils::CImage& patch_img,
 	size_t& x_max, size_t& y_max, double& max_val, int x_search_ini = -1,
 	int y_search_ini = -1, int x_search_size = -1, int y_search_size = -1);
@@ -69,7 +69,7 @@ void  openCV_cross_correlation(
 /**	Invert an image using OpenCV function
 *
 */
-void  flip(mrpt::utils::CImage& img);
+void flip(mrpt::utils::CImage& img);
 
 /** Extract a UNITARY 3D vector in the direction of a 3D point, given from its
  * (x,y) pixels coordinates, and the camera intrinsic coordinates.
@@ -79,7 +79,7 @@ void  flip(mrpt::utils::CImage& img);
   *  \return The mrpt::math::TPoint3D containing the output unitary vector.
   * \sa buildIntrinsicParamsMatrix, defaultIntrinsicParamsMatrix, TPixelCoordf
   */
-mrpt::math::TPoint3D  pixelTo3D(
+mrpt::math::TPoint3D pixelTo3D(
 	const mrpt::utils::TPixelCoordf& xy, const mrpt::math::CMatrixDouble33& A);
 
 /** Builds the intrinsic parameters matrix A from parameters:
@@ -98,7 +98,7 @@ mrpt::math::TPoint3D  pixelTo3D(
   rhref="http://www.mrpt.org/Camera_Parameters">camera model parameters</a>.
   * \sa defaultIntrinsicParamsMatrix, pixelTo3D
   */
-mrpt::math::CMatrixDouble33  buildIntrinsicParamsMatrix(
+mrpt::math::CMatrixDouble33 buildIntrinsicParamsMatrix(
 	const double focalLengthX, const double focalLengthY, const double centerX,
 	const double centerY);
 
@@ -147,7 +147,7 @@ mrpt::math::CMatrixDouble33  buildIntrinsicParamsMatrix(
 
   * \sa buildIntrinsicParamsMatrix, pixelTo3D
   */
-mrpt::math::CMatrixDouble33  defaultIntrinsicParamsMatrix(
+mrpt::math::CMatrixDouble33 defaultIntrinsicParamsMatrix(
 	unsigned int camIndex = 0, unsigned int resolutionX = 320,
 	unsigned int resolutionY = 240);
 
@@ -155,7 +155,7 @@ mrpt::math::CMatrixDouble33  defaultIntrinsicParamsMatrix(
  * coordinates
   * \param list [IN] The list of features.
   */
-void  deleteRepeatedFeats(CFeatureList& list);
+void deleteRepeatedFeats(CFeatureList& list);
 
 /** Search for correspondences which are not in the same row and deletes them
   * \param leftList     [IN/OUT]    The left list of matched features.
@@ -163,7 +163,7 @@ void  deleteRepeatedFeats(CFeatureList& list);
   * \param threshold    [IN]        The tolerance value for the row checking:
  * valid matched are within this threshold.
   */
-void  rowChecking(
+void rowChecking(
 	CFeatureList& leftList, CFeatureList& rightList, float threshold = 1.0);
 
 /** Computes the dispersion of the features in the image
@@ -173,20 +173,20 @@ void  rowChecking(
   * \param mean	[OUT]   2 element vector containing the mean in the 'x' and
  * 'y' coordinates.
   */
-void  getDispersion(
+void getDispersion(
 	const CFeatureList& list, mrpt::math::CVectorFloat& std,
 	mrpt::math::CVectorFloat& mean);
 
 /** Computes the mean squared distance between a set of 3D correspondences
   * ...
   */
-double  computeMsd(
+double computeMsd(
 	const mrpt::utils::TMatchingPairList& list, const poses::CPose3D& Rt);
 
 /** Transform two clouds of 3D points into a matched list of points
   * ...
   */
-void  cloudsToMatchedList(
+void cloudsToMatchedList(
 	const mrpt::obs::CObservationVisualLandmarks& cloud1,
 	const mrpt::obs::CObservationVisualLandmarks& cloud2,
 	mrpt::utils::TMatchingPairList& outList);
@@ -200,7 +200,7 @@ void  cloudsToMatchedList(
  * points.
   * \return The main orientation of the image point.
   */
-float  computeMainOrientation(
+float computeMainOrientation(
 	const mrpt::utils::CImage& image, unsigned int x, unsigned int y);
 
 /** Normalizes the brigthness and contrast of an image by setting its mean value
@@ -208,7 +208,7 @@ float  computeMainOrientation(
   * \param image        [IN]        The input image.
   * \param nimage       [OUTPUT]    The new normalized image.
   */
-void  normalizeImage(
+void normalizeImage(
 	const mrpt::utils::CImage& image, mrpt::utils::CImage& nimage);
 
 /** Find the matches between two lists of features which must be of the same
@@ -219,7 +219,7 @@ void  normalizeImage(
   * \param options  [IN]    A struct containing matching options
   * \return Returns the number of matched pairs of features.
   */
-size_t  matchFeatures(
+size_t matchFeatures(
 	const CFeatureList& list1, const CFeatureList& list2,
 	CMatchedFeatureList& matches,
 	const TMatchingOptions& options = TMatchingOptions(),
@@ -233,7 +233,7 @@ size_t  matchFeatures(
   * \param wSize    [IN] The value of the masking window for each features.
   * \exception if mList.size() = 0
   */
-void  generateMask(
+void generateMask(
 	const CMatchedFeatureList& mList, mrpt::math::CMatrixBool& mask1,
 	mrpt::math::CMatrixBool& mask2, int wSize = 10);
 
@@ -243,7 +243,7 @@ void  generateMask(
   * \param patch2 [IN]  The other patch.
   * \return The value of computed SAD normalized to [0,1]
   */
-double  computeSAD(
+double computeSAD(
 	const mrpt::utils::CImage& patch1, const mrpt::utils::CImage& patch2);
 
 /** Draw rectangles around each of the features on a copy of the input image.
@@ -252,11 +252,11 @@ double  computeSAD(
   * \param outImg   [OUT]   The copy of the input image with the marked
  * features.
   */
-void  addFeaturesToImage(
+void addFeaturesToImage(
 	const mrpt::utils::CImage& inImg, const CFeatureList& theList,
 	mrpt::utils::CImage& outImg);
 
-void  projectMatchedFeatures(
+void projectMatchedFeatures(
 	const CMatchedFeatureList& matches,
 	const mrpt::utils::TStereoCamera& stereo_camera,
 	std::vector<mrpt::math::TPoint3D>& out_points);
@@ -271,7 +271,7 @@ void  projectMatchedFeatures(
   * \param params       [IN]    The intrinsic and extrinsic parameters of the
  * stereo pair.
   */
-void  projectMatchedFeatures(
+void projectMatchedFeatures(
 	const CFeatureList& leftList, const CFeatureList& rightList,
 	std::vector<mrpt::math::TPoint3D>& vP3D,
 	const TStereoSystemParams& params = TStereoSystemParams());
@@ -283,7 +283,7 @@ void  projectMatchedFeatures(
   * \param params       [IN]    The intrinsic and extrinsic parameters of the
  * stereo pair.
   */
-void  projectMatchedFeature(
+void projectMatchedFeature(
 	const CFeature::Ptr& leftFeat, const CFeature::Ptr& rightFeat,
 	mrpt::math::TPoint3D& p3D,
 	const TStereoSystemParams& params = TStereoSystemParams());
@@ -297,7 +297,7 @@ void  projectMatchedFeature(
   * \param landmarks    [OUT]       A map containing the projected landmarks.
   * \sa TStereoSystemParams, CLandmarksMap
   */
-void  projectMatchedFeatures(
+void projectMatchedFeatures(
 	CMatchedFeatureList& mfList, const TStereoSystemParams& param,
 	mrpt::maps::CLandmarksMap& landmarks);
 
@@ -312,7 +312,7 @@ void  projectMatchedFeatures(
   * \param landmarks    (OUT]       A map containing the projected landmarks.
   * \sa TStereoSystemParams, CLandmarksMap
   */
-void  projectMatchedFeatures(
+void projectMatchedFeatures(
 	CFeatureList& leftList, CFeatureList& rightList,
 	const TStereoSystemParams& param, mrpt::maps::CLandmarksMap& landmarks);
 
@@ -323,7 +323,7 @@ void  projectMatchedFeatures(
 	\param outObs	[OUT]	The output bearing and range observation
    (including covariances).
 */
-void  StereoObs2BRObs(
+void StereoObs2BRObs(
 	const mrpt::obs::CObservationStereoImages& inObs,
 	const std::vector<double>& sg, mrpt::obs::CObservationBearingRange& outObs);
 
@@ -339,7 +339,7 @@ void  StereoObs2BRObs(
 	\param outObs			[OUT]	The output bearing and range observation
    (including covariances).
 */
-void  StereoObs2BRObs(
+void StereoObs2BRObs(
 	const CMatchedFeatureList& inMatches,
 	const mrpt::math::CMatrixDouble33& intrinsicParams, const double& baseline,
 	const mrpt::poses::CPose3D& sensorPose, const std::vector<double>& sg,
@@ -352,7 +352,7 @@ void  StereoObs2BRObs(
    variables involved in the feature detection.
 	\param outObs			[OUT]	The output bearing and range observation.
 */
-void  StereoObs2BRObs(
+void StereoObs2BRObs(
 	const mrpt::obs::CObservationStereoImages& inObs,
 	const std::vector<double>& sg, mrpt::obs::CObservationBearingRange& outObs);
 
@@ -361,7 +361,7 @@ void  StereoObs2BRObs(
 	\param inObs			[IN]	The input observation.
 	\param outObs			[OUT]	The output bearing and range observation.
 */
-void  StereoObs2BRObs(
+void StereoObs2BRObs(
 	const mrpt::obs::CObservationVisualLandmarks& inObs,
 	mrpt::obs::CObservationBearingRange& outObs);
 
@@ -377,7 +377,7 @@ wrt the first one
 * \sa An easier to use class for stereo rectification
 mrpt::vision::CStereoRectifyMap
 */
-void  computeStereoRectificationMaps(
+void computeStereoRectificationMaps(
 	const mrpt::utils::TCamera& cam1, const mrpt::utils::TCamera& cam2,
 	const mrpt::poses::CPose3D& rightCameraPose, void* outMap1x, void* outMap1y,
 	void* outMap2x, void* outMap2y);

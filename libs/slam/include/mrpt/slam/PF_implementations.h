@@ -23,7 +23,6 @@
 
 #include <mrpt/slam/PF_implementations_data.h>
 
-
 /** \file PF_implementations.h
  *  This file contains the implementations of the template members declared in
  * mrpt::slam::PF_implementation

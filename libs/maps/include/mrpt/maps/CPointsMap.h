@@ -61,9 +61,9 @@ struct pointmap_traits;
   * \ingroup mrpt_maps_grp
  */
 class CPointsMap : public CMetricMap,
-							   public mrpt::math::KDTreeCapable<CPointsMap>,
-							   public mrpt::utils::PLY_Importer,
-							   public mrpt::utils::PLY_Exporter
+				   public mrpt::math::KDTreeCapable<CPointsMap>,
+				   public mrpt::utils::PLY_Importer,
+				   public mrpt::utils::PLY_Exporter
 {
 	DEFINE_VIRTUAL_SERIALIZABLE(CPointsMap)
 	// This must be added for declaration of MEX-related functions
@@ -1161,7 +1161,7 @@ namespace global_settings
   * Affects to:
   *		- mrpt::maps::CPointsMap and all its children classes.
   */
-extern  float POINTSMAPS_3DOBJECT_POINTSIZE;
+extern float POINTSMAPS_3DOBJECT_POINTSIZE;
 }
 
 namespace utils

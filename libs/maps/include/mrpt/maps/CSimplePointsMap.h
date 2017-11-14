@@ -14,7 +14,6 @@
 #include <mrpt/math/CMatrix.h>
 #include <mrpt/obs/obs_frwds.h>
 
-
 namespace mrpt
 {
 namespace maps

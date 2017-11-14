@@ -112,8 +112,7 @@ std::string ObjectToString(const CSerializable* o);
  * \sa ObjectToString, <a href="http://www.mrpt.org/Integration_with_BABEL"
  * >Integration with BABEL</a>
  */
-void
-	StringToObject(const std::string& str, CSerializable::Ptr& obj);
+void StringToObject(const std::string& str, CSerializable::Ptr& obj);
 
 /** Converts (serializes) an MRPT object into an array of bytes.
  * \param o The object to be serialized.
@@ -121,8 +120,7 @@ void
  * be set automatically.
  * \sa OctetVectorToObject, ObjectToString
  */
-void
-	ObjectToOctetVector(const CSerializable* o, vector_byte& out_vector);
+void ObjectToOctetVector(const CSerializable* o, vector_byte& out_vector);
 
 /** Converts back (de-serializes) a sequence of binary data into a MRPT object,
  * without prior information about the object's class.
@@ -132,8 +130,7 @@ void
  * pointer.
  * \sa ObjectToOctetVector, StringToObject
  */
-void
-	OctetVectorToObject(const vector_byte& in_data, CSerializable::Ptr& obj);
+void OctetVectorToObject(const vector_byte& in_data, CSerializable::Ptr& obj);
 
 /** Converts (serializes) an MRPT object into an array of bytes within a
  * std::string, without codifying to avoid nullptr characters.
@@ -143,8 +140,7 @@ void
  * be set automatically.
  * \sa RawStringToObject, ObjectToOctetVector
  */
-void
-	ObjectToRawString(const CSerializable* o, std::string& out_str);
+void ObjectToRawString(const CSerializable* o, std::string& out_str);
 
 /** Converts back (de-serializes) a sequence of binary data within a std::string
  * into a MRPT object, without prior information about the object's class.
@@ -154,8 +150,7 @@ void
  * pointer.
  * \sa ObjectToRawString
  */
-void
-	RawStringToObject(const std::string& in_str, CSerializable::Ptr& obj);
+void RawStringToObject(const std::string& in_str, CSerializable::Ptr& obj);
 
 /** @} */
 

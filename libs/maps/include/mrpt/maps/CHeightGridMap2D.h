@@ -60,10 +60,9 @@ struct THeightGridmapCell
   *
   * \ingroup mrpt_maps_grp
   */
-class CHeightGridMap2D
-	: public mrpt::maps::CMetricMap,
-	  public utils::CDynamicGrid<THeightGridmapCell>,
-	  public CHeightGridMap2D_Base
+class CHeightGridMap2D : public mrpt::maps::CMetricMap,
+						 public utils::CDynamicGrid<THeightGridmapCell>,
+						 public CHeightGridMap2D_Base
 {
 	DEFINE_SERIALIZABLE(CHeightGridMap2D)
    public:
@@ -182,7 +181,7 @@ namespace global_settings
   * Affects to:
   *		- CHeightGridMap2D::getAs3DObject
   */
-extern  bool HEIGHTGRIDMAP_EXPORT3D_AS_MESH;
+extern bool HEIGHTGRIDMAP_EXPORT3D_AS_MESH;
 }
 
 // Specializations MUST occur at the same namespace:

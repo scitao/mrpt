@@ -17,7 +17,6 @@
 #include <mrpt/graphs/ScalarFactorGraph.h>
 #include <mrpt/math/lightweight_geom_data.h>
 
-
 // Fwdr decl:
 class vtkStructuredGrid;
 

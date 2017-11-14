@@ -15,7 +15,6 @@
 #include <mrpt/utils/CSerializable.h>
 #include <mrpt/math/CMatrix.h>
 
-
 namespace mrpt
 {
 namespace maps

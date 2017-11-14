@@ -73,9 +73,8 @@ enum PTG_collision_behavior_t
  *
  *  \ingroup nav_tpspace
  */
-class CParameterizedTrajectoryGenerator
-	: public mrpt::utils::CSerializable,
-	  public mrpt::utils::CLoadableOptions
+class CParameterizedTrajectoryGenerator : public mrpt::utils::CSerializable,
+										  public mrpt::utils::CLoadableOptions
 {
 	DEFINE_VIRTUAL_SERIALIZABLE(CParameterizedTrajectoryGenerator)
    public:
@@ -501,8 +500,7 @@ using TListPTGPtr =
 /** Base class for all PTGs using a 2D polygonal robot shape model.
  *  \ingroup nav_tpspace
  */
-class CPTG_RobotShape_Polygonal
-	: public CParameterizedTrajectoryGenerator
+class CPTG_RobotShape_Polygonal : public CParameterizedTrajectoryGenerator
 {
    public:
 	CPTG_RobotShape_Polygonal();
@@ -544,8 +542,7 @@ class CPTG_RobotShape_Polygonal
 /** Base class for all PTGs using a 2D circular robot shape model.
  *  \ingroup nav_tpspace
  */
-class CPTG_RobotShape_Circular
-	: public CParameterizedTrajectoryGenerator
+class CPTG_RobotShape_Circular : public CParameterizedTrajectoryGenerator
 {
    public:
 	CPTG_RobotShape_Circular();

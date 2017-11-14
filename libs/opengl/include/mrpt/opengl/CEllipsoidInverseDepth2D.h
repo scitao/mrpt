@@ -43,8 +43,7 @@ namespace opengl
   *
   * \ingroup mrpt_opengl_grp
   */
-class CEllipsoidInverseDepth2D
-	: public CGeneralizedEllipsoidTemplate<2>
+class CEllipsoidInverseDepth2D : public CGeneralizedEllipsoidTemplate<2>
 {
 	typedef CGeneralizedEllipsoidTemplate<2> BASE;
 	DEFINE_SERIALIZABLE(CEllipsoidInverseDepth2D)

@@ -27,7 +27,7 @@ namespace hmtslam
   * \ingroup mrpt_hmtslam_grp
  */
 class CHierarchicalMHMap : public mrpt::utils::CSerializable,
-										  public CHierarchicalMapMHPartition
+						   public CHierarchicalMapMHPartition
 {
 	friend class CHMHMapArc;
 	friend class CHMHMapNode;

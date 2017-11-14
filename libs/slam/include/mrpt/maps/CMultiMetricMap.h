@@ -29,7 +29,6 @@
 #include <mrpt/utils/poly_ptr_ptr.h>
 #include <mrpt/obs/obs_frwds.h>
 
-
 namespace mrpt
 {
 namespace maps

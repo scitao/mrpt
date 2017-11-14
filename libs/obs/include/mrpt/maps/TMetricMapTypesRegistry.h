@@ -59,12 +59,11 @@ struct TMetricMapTypesRegistry
    public:                                                                      \
 	/** @name Map Definition Interface stuff (see                               \
 	 * mrpt::maps::TMetricMapInitializer) @{ */                                 \
-	struct TMapDefinitionBase                                         \
-		: public mrpt::maps::TMetricMapInitializer                              \
+	struct TMapDefinitionBase : public mrpt::maps::TMetricMapInitializer        \
 	{                                                                           \
 		TMapDefinitionBase() : TMetricMapInitializer(CLASS_ID(_CLASS_NAME_)) {} \
 	};                                                                          \
-	struct TMapDefinition : public TMapDefinitionBase                 \
+	struct TMapDefinition : public TMapDefinitionBase                           \
 	{
 #define MAP_DEFINITION_END(_CLASS_NAME_, _LINKAGE_)                          \
 	TMapDefinition();                                                        \

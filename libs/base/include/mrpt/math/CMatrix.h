@@ -22,11 +22,9 @@ namespace math
  * http://www.mrpt.org/Matrices_vectors_arrays_and_Linear_Algebra_MRPT_and_Eigen_classes
  * \ingroup mrpt_base_grp
  */
-class CMatrix : public mrpt::utils::CSerializable,
-								  public CMatrixFloat
+class CMatrix : public mrpt::utils::CSerializable, public CMatrixFloat
 {
-	DEFINE_SERIALIZABLE_CUSTOM_LINKAGE(
-		CMatrix, void, static, virtual)
+	DEFINE_SERIALIZABLE_CUSTOM_LINKAGE(CMatrix, void, static, virtual)
 
    public:
 	/** Constructor  */

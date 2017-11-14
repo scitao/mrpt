@@ -53,7 +53,7 @@ namespace maps
  * \ingroup mrpt_obs_grp
  */
 class CMetricMap : public mrpt::utils::CSerializable,
-							  public mrpt::utils::CObservable
+				   public mrpt::utils::CObservable
 {
 	DEFINE_VIRTUAL_SERIALIZABLE(CMetricMap)
 

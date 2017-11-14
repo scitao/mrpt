@@ -16,7 +16,6 @@
 #include <mrpt/math/CMatrix.h>
 #include <mrpt/utils/TEnumType.h>
 
-
 namespace mrpt
 {
 namespace maps

@@ -18,7 +18,6 @@
 #include <mrpt/maps/CLogOddsGridMap2D.h>
 #include <mrpt/obs/obs_frwds.h>
 
-
 namespace mrpt
 {
 namespace maps
@@ -40,8 +39,8 @@ namespace maps
   * \ingroup mrpt_maps_grp
   */
 class CReflectivityGridMap2D : public CMetricMap,
-										   public utils::CDynamicGrid<int8_t>,
-										   public CLogOddsGridMap2D<int8_t>
+							   public utils::CDynamicGrid<int8_t>,
+							   public CLogOddsGridMap2D<int8_t>
 {
 	DEFINE_SERIALIZABLE(CReflectivityGridMap2D)
 
@@ -81,7 +80,11 @@ class CReflectivityGridMap2D : public CMetricMap,
 		void dumpToTextStream(
 			mrpt::utils::CStream& out) const override;  // See base docs
 
-		int16_t channel; //!< The reflectivity channel for this map. If channel=-1, then any channel will be accepted. Otherwise, the map will ignore CObservationReflectivity instances with a differing channel. (Default=-1)
+		int16_t channel;  //!< The reflectivity channel for this map. If
+						  //!channel=-1, then any channel will be accepted.
+						  //!Otherwise, the map will ignore
+						  //!CObservationReflectivity instances with a differing
+						  //!channel. (Default=-1)
 	} insertionOptions;
 
 	/** See docs in base class: in this class this always returns 0 */

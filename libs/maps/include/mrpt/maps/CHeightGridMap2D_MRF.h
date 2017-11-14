@@ -34,7 +34,7 @@ namespace maps
   * \ingroup mrpt_maps_grp
   */
 class CHeightGridMap2D_MRF : public CRandomFieldGridMap2D,
-										 public CHeightGridMap2D_Base
+							 public CHeightGridMap2D_Base
 {
 	DEFINE_SERIALIZABLE(CHeightGridMap2D_MRF)
    public:
@@ -49,7 +49,7 @@ class CHeightGridMap2D_MRF : public CRandomFieldGridMap2D,
 
 	/** Parameters related with inserting observations into the map */
 	struct TInsertionOptions : public utils::CLoadableOptions,
-										   public TInsertionOptionsCommon
+							   public TInsertionOptionsCommon
 	{
 		/** Default values loader */
 		TInsertionOptions();
@@ -112,7 +112,6 @@ class CHeightGridMap2D_MRF : public CRandomFieldGridMap2D,
 	mrpt::maps::CHeightGridMap2D_MRF::TInsertionOptions insertionOpts;
 	MAP_DEFINITION_END(CHeightGridMap2D_MRF, )
 };
-
 
 }  // End of namespace
 }  // End of namespace

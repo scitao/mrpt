@@ -18,7 +18,6 @@
 
 #include <mrpt/opengl/CSetOfObjects.h>
 
-
 namespace mrpt
 {
 namespace utils

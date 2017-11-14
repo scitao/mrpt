@@ -46,8 +46,7 @@ namespace opengl
   *
   * \ingroup mrpt_opengl_grp
   */
-class CEllipsoidInverseDepth3D
-	: public CGeneralizedEllipsoidTemplate<3>
+class CEllipsoidInverseDepth3D : public CGeneralizedEllipsoidTemplate<3>
 {
 	typedef CGeneralizedEllipsoidTemplate<3> BASE;
 	DEFINE_SERIALIZABLE(CEllipsoidInverseDepth3D)

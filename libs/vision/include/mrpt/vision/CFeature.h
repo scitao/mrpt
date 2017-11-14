@@ -302,8 +302,7 @@ class CFeature : public mrpt::utils::CSerializable
 /** A list of visual features, to be used as output by detectors, as
  * input/output by trackers, etc.
   */
-class CFeatureList
-	: public mrpt::math::KDTreeCapable<CFeatureList>
+class CFeatureList : public mrpt::math::KDTreeCapable<CFeatureList>
 {
    protected:
 	typedef std::vector<CFeature::Ptr> TInternalFeatList;

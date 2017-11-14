@@ -60,21 +60,19 @@ void registerClassCustomName(
  * mrpt::utils::registerClass.
   * \sa registerClass, findRegisteredClass
   */
-std::vector<const mrpt::utils::TRuntimeClassId*>
-	getAllRegisteredClasses();
+std::vector<const mrpt::utils::TRuntimeClassId*> getAllRegisteredClasses();
 
 /** Like getAllRegisteredClasses(), but filters the list to only include
  * children clases of a given base one.
   * \sa getAllRegisteredClasses(), getAllRegisteredClassesChildrenOf()  */
-std::vector<const TRuntimeClassId*>
-	getAllRegisteredClassesChildrenOf(const TRuntimeClassId* parent_id);
+std::vector<const TRuntimeClassId*> getAllRegisteredClassesChildrenOf(
+	const TRuntimeClassId* parent_id);
 
 /** Return info about a given class by its name, or nullptr if the class is not
  * registered
   * \sa registerClass, getAllRegisteredClasses
   */
-const TRuntimeClassId* findRegisteredClass(
-	const std::string& className);
+const TRuntimeClassId* findRegisteredClass(const std::string& className);
 
 template <typename T>
 constexpr const mrpt::utils::TRuntimeClassId* CLASS_ID_impl()
@@ -151,10 +149,11 @@ class CObject
    protected:
 	static mrpt::utils::TRuntimeClassId* _GetBaseClass();
 	static const mrpt::utils::TRuntimeClassId runtimeClassId;
+
    public:
 	using Ptr = std::shared_ptr<CObject>;
 	using ConstPtr = std::shared_ptr<const CObject>;
-	static const mrpt::utils::TRuntimeClassId & GetRuntimeClassIdStatic();
+	static const mrpt::utils::TRuntimeClassId& GetRuntimeClassIdStatic();
 	/** Returns information about the class of an object in runtime. */
 	virtual const mrpt::utils::TRuntimeClassId* GetRuntimeClass() const
 	{
@@ -193,11 +192,13 @@ inline mrpt::utils::CObject::Ptr CObject::duplicateGetSmartPtr() const
 	_STATIC_LINKAGE_ const mrpt::utils::TRuntimeClassId* _GetBaseClass();   \
 	_STATIC_LINKAGE_ mrpt::utils::CLASSINIT _init_##class_name;             \
 	_STATIC_LINKAGE_ const mrpt::utils::TRuntimeClassId runtimeClassId;     \
+                                                                            \
    public:                                                                  \
 	/*! A typedef for the associated smart pointer */                       \
 	using Ptr = std::shared_ptr<class_name>;                                \
 	using ConstPtr = std::shared_ptr<const class_name>;                     \
-	_STATIC_LINKAGE_ const mrpt::utils::TRuntimeClassId & GetRuntimeClassIdStatic(); \
+	_STATIC_LINKAGE_ const mrpt::utils::TRuntimeClassId&                    \
+		GetRuntimeClassIdStatic();                                          \
 	_STATIC_LINKAGE_ const mrpt::utils::TRuntimeClassId* classinfo;         \
 	_VIRTUAL_LINKAGE_ const mrpt::utils::TRuntimeClassId* GetRuntimeClass() \
 		const override;                                                     \
@@ -230,13 +231,14 @@ inline mrpt::utils::CObject::Ptr CObject::duplicateGetSmartPtr() const
 	{                                                                          \
 		return CLASS_ID(base);                                                 \
 	}                                                                          \
-	const mrpt::utils::TRuntimeClassId & NameSpace::class_name::GetRuntimeClassIdStatic() \
+	const mrpt::utils::TRuntimeClassId&                                        \
+		NameSpace::class_name::GetRuntimeClassIdStatic()                       \
 	{                                                                          \
 		return NameSpace::class_name::runtimeClassId;                          \
 	}                                                                          \
-	const mrpt::utils::TRuntimeClassId NameSpace::class_name::runtimeClassId = { \
-		#class_name, NameSpace::class_name::CreateObject,                      \
-		&class_name::_GetBaseClass};                                           \
+	const mrpt::utils::TRuntimeClassId NameSpace::class_name::runtimeClassId = \
+		{#class_name, NameSpace::class_name::CreateObject,                     \
+		 &class_name::_GetBaseClass};                                          \
 	const mrpt::utils::TRuntimeClassId* NameSpace::class_name::classinfo =     \
 		&NameSpace::class_name::runtimeClassId;                                \
 	const mrpt::utils::TRuntimeClassId*                                        \
@@ -261,6 +263,7 @@ inline mrpt::utils::CObject::Ptr CObject::duplicateGetSmartPtr() const
    protected:                                                     \
 	static const mrpt::utils::TRuntimeClassId* _GetBaseClass();   \
 	static const mrpt::utils::TRuntimeClassId runtimeClassId;     \
+                                                                  \
    public:                                                        \
 	using Ptr = std::shared_ptr<class_name>;                      \
 	using ConstPtr = std::shared_ptr<const class_name>;           \

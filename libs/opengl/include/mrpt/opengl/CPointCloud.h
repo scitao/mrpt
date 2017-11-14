@@ -45,9 +45,9 @@ namespace opengl
   * \ingroup mrpt_opengl_grp
   */
 class CPointCloud : public CRenderizable,
-								  public COctreePointRenderer<CPointCloud>,
-								  public mrpt::utils::PLY_Importer,
-								  public mrpt::utils::PLY_Exporter
+					public COctreePointRenderer<CPointCloud>,
+					public mrpt::utils::PLY_Importer,
+					public mrpt::utils::PLY_Exporter
 {
 	DEFINE_SERIALIZABLE(CPointCloud)
    protected:

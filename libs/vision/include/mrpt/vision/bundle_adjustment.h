@@ -96,7 +96,7 @@ using TBundleAdjustmentFeedbackFunctor = std::function<void(
   * \return The final overall squared error.
   * \ingroup bundle_adj
   */
-double  bundle_adj_full(
+double bundle_adj_full(
 	const mrpt::vision::TSequenceFeatureObservations& observations,
 	const mrpt::utils::TCamera& camera_params,
 	mrpt::vision::TFramePosesVec& frame_poses,
@@ -117,14 +117,14 @@ double  bundle_adj_full(
   * \sa bundle_adj_full
   * \ingroup bundle_adj
   */
-void  ba_initial_estimate(
+void ba_initial_estimate(
 	const mrpt::vision::TSequenceFeatureObservations& observations,
 	const mrpt::utils::TCamera& camera_params,
 	mrpt::vision::TFramePosesVec& frame_poses,
 	mrpt::vision::TLandmarkLocationsVec& landmark_points);
 
 //! \overload
-void  ba_initial_estimate(
+void ba_initial_estimate(
 	const mrpt::vision::TSequenceFeatureObservations& observations,
 	const mrpt::utils::TCamera& camera_params,
 	mrpt::vision::TFramePosesMap& frame_poses,
@@ -139,7 +139,7 @@ void  ba_initial_estimate(
   *  \return Overall squared reprojection error.
   * \ingroup bundle_adj
   */
-double  reprojectionResiduals(
+double reprojectionResiduals(
 	const mrpt::vision::TSequenceFeatureObservations& observations,
 	const mrpt::utils::TCamera& camera_params,
 	const mrpt::vision::TFramePosesVec& frame_poses,
@@ -150,7 +150,7 @@ double  reprojectionResiduals(
 	std::vector<double>* out_kernel_1st_deriv = nullptr);
 
 //! \overload
-double  reprojectionResiduals(
+double reprojectionResiduals(
 	const mrpt::vision::TSequenceFeatureObservations& observations,
 	const mrpt::utils::TCamera& camera_params,
 	const mrpt::vision::TFramePosesMap& frame_poses,
@@ -176,7 +176,7 @@ double  reprojectionResiduals(
  * "frame_poses.size() * 6"
   * \ingroup bundle_adj
   */
-void  add_se3_deltas_to_frames(
+void add_se3_deltas_to_frames(
 	const mrpt::vision::TFramePosesVec& frame_poses,
 	const mrpt::math::CVectorDouble& delta, const size_t delta_first_idx,
 	const size_t delta_num_vals, mrpt::vision::TFramePosesVec& new_frame_poses,
@@ -193,7 +193,7 @@ void  add_se3_deltas_to_frames(
  * "landmark_points.size() * 3"
   * \ingroup bundle_adj
   */
-void  add_3d_deltas_to_points(
+void add_3d_deltas_to_points(
 	const mrpt::vision::TLandmarkLocationsVec& landmark_points,
 	const mrpt::math::CVectorDouble& delta, const size_t delta_first_idx,
 	const size_t delta_num_vals,

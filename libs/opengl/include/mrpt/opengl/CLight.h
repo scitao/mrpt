@@ -64,9 +64,9 @@ struct CLight
 	void sendToOpenGL() const;
 };
 
- mrpt::utils::CStream& operator>>(
+mrpt::utils::CStream& operator>>(
 	mrpt::utils::CStream& in, mrpt::opengl::CLight& o);
- mrpt::utils::CStream& operator<<(
+mrpt::utils::CStream& operator<<(
 	mrpt::utils::CStream& out, const mrpt::opengl::CLight& o);
 
 }  // end namespace

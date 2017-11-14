@@ -12,7 +12,6 @@
 #include <mrpt/utils/CSerializable.h>
 #include <mrpt/system/datetime.h>
 
-
 namespace mrpt
 {
 /** \ingroup mrpt_obs_grp */
